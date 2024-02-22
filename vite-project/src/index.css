@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+
+:root {
+  --Dark-Green: #02c39a;
+  --Medium-Green: #86cb92;
+  --Light-Green: #fffef1;
+
+  --Dark-Gray: #323430;
+  --Medium-Grey: #545550;
+  --Light-Gray: #757770;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Prosto One", cursive;
+  overflow-x: hidden;
+}
+
+body {
+  /* background-color: var(--Dark-Blue); */
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  /* opacity: 0;
+  visibility: hidden; */
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+}
