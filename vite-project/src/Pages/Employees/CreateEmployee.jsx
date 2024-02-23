@@ -3,18 +3,26 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { actions as employeesActions } from "../../global/slices/employeesSlice";
 import { useState } from "react";
-import EmployeesList from "./EmployeesList";
+import { useSelector } from "react-redux";
 
 const CreateEmployee = () => {
   const [isActive, setIsActive] = useState(true);
   const nav = useNavigate();
   const dispatch = useDispatch();
+  const { employeesArr } = useSelector((state) => state.employees);
 
   //1. Handle the form close button
   const handleClose = () => nav("/employees");
 
   //2. Setting state for passing to redux throught handleSubmit
+
+  let id = 0;
+  employeesArr.forEach((e, i) => {
+    return (id = ++i);
+  });
+
   const [state, setState] = useState({
+    id: ++id,
     fullName: "",
     email: "",
     phoneNumber: 0,
@@ -42,7 +50,7 @@ const CreateEmployee = () => {
         <ion-icon className="icon-close" name="close-outline"></ion-icon>
       </button>
       <div className="input-empl">
-        <label for="full-name">Full name</label>
+        <label htmlFor="full-name">Full name</label>
         <input
           onChange={handleTypo}
           name="fullName"
@@ -54,7 +62,7 @@ const CreateEmployee = () => {
       </div>
 
       <div className="input-empl">
-        <label for="i-email">Email</label>
+        <label htmlFor="i-email">Email</label>
         <input
           onChange={handleTypo}
           name="email"
@@ -65,7 +73,7 @@ const CreateEmployee = () => {
         />
       </div>
       <div className="input-empl">
-        <label for="phone">Phone number</label>
+        <label htmlFor="phone">Phone number</label>
         <input
           onChange={handleTypo}
           name="phoneNumber"
@@ -76,7 +84,7 @@ const CreateEmployee = () => {
         />
       </div>
       <div className="input-empl">
-        <label for="birth">Date of birth</label>
+        <label htmlFor="birth">Date of birth</label>
         <input
           onChange={handleTypo}
           name="birthDay"
@@ -87,7 +95,7 @@ const CreateEmployee = () => {
         />
       </div>
       <div className="input-empl">
-        <label for="salary">Monthly salary</label>
+        <label htmlFor="salary">Monthly salary</label>
         <input
           onChange={handleTypo}
           name="salary"

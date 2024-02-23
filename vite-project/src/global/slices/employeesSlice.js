@@ -5,6 +5,7 @@ export const { actions, reducer } = createSlice({
   initialState: {
     employeesArr: [],
     employeeForm: {
+      id: 0,
       fullName: "",
       email: "",
       phoneNumber: 0,
@@ -15,6 +16,11 @@ export const { actions, reducer } = createSlice({
   reducers: {
     addEmployee(state, { payload: employee }) {
       state.employeesArr.push({ employee });
+    },
+    deleteEmployee(state, { payload: employee }) {
+      state.employeesArr = state.employeesArr.filter(
+        (e) => e.employee.id !== employee
+      );
     },
   },
 });

@@ -1,16 +1,20 @@
 import "./employees.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { actions as employeesActions } from "../../global/slices/employeesSlice";
 
 const EmployeesList = () => {
   const { employeesArr } = useSelector((state) => state.employees);
-  employeesArr.forEach((e) => console.log(e.employee));
+
+  const dispatch = useDispatch();
+
+  // const handleDelete = () => {};
 
   if (!employeesArr) return;
 
   return (
     <ul className="lists-added-employee flex-column">
-      {employeesArr.map((e) => (
-        <li className="employee-info">
+      {employeesArr.map((e, i) => (
+        <li className="employee-info" key={i}>
           <p className="id-empl">{e.employee.id}</p>
           <p className="fullname">{e.employee.fullName}</p>
           <p className="email">{e.employee.email}</p>
@@ -18,7 +22,14 @@ const EmployeesList = () => {
           <p className="birth-date">{e.employee.birthDay}</p>
           <p className="monthly-salary">{e.employee.salary}</p>
 
-          <button className="btn-delete">Delete</button>
+          <button
+            onClick={() => {
+              dispatch(employeesActions.deleteEmployee(e.employee.id));
+            }}
+            className="btn-delete"
+          >
+            Delete
+          </button>
         </li>
       ))}
     </ul>
