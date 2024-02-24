@@ -17,8 +17,8 @@ const CreateEmployee = () => {
   //2. Setting state for passing to redux throught handleSubmit
 
   let id = 0;
-  employeesArr.forEach((e, i) => {
-    return (id = ++i);
+  employeesArr.forEach((e) => {
+    if (e.employee.id > id) id = e.employee.id;
   });
 
   const [state, setState] = useState({
