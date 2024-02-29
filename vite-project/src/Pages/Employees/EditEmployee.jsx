@@ -1,47 +1,47 @@
-import "./createEmployee.css";
+import "./editEmployee.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { actions as employeesActions } from "../../global/slices/employeesSlice";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const CreateEmployee = () => {
-  const [isActive, setIsActive] = useState(true);
+const EditEmployee = () => {
+  const isActive = true;
   const nav = useNavigate();
   const dispatch = useDispatch();
-  const { employeesArr } = useSelector((state) => state.employees);
+  const { employeesArr, editEmployeeId } = useSelector(
+    (state) => state.employees
+  );
 
   //1. Handle the form close button
   const handleClose = () => nav("/employees");
 
-  //2. Setting state for passing to redux throught handleSubmit
+  //2. Finding employee for editing
+  let editEmployee = employeesArr.filter(
+    (e) => e.employee.id === editEmployeeId
+  )[0];
 
-  let id = 0;
-  employeesArr.forEach((e) => {
-    if (e.employee.id > id) id = e.employee.id;
-  });
+  if (!editEmployee) return;
 
+  //3. Filling form data of employee for editing
   const [state, setState] = useState({
-    id: ++id,
-    fullName: "",
-    email: "",
-    phoneNumber: 0,
-    birthDay: "",
-    salary: 0,
+    id: editEmployee.employee.id,
+    fullName: editEmployee.employee.fullName,
+    email: editEmployee.employee.email,
+    phoneNumber: editEmployee.employee.phoneNumber,
+    birthDay: editEmployee.employee.birthDay,
+    salary: editEmployee.employee.salary,
   });
 
-  //3. Getting form input data
+  // //3. Getting edited form input data
   const handleTypo = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
-  //4. Submitting form and adding state object(input data) to redux
-  const handleSubmit = (e) => {
+  //4. Submitting form and adding new edited state object(input data) to redux
+  const handleEdit = (e) => {
     e.preventDefault();
-    //Send data to redux (add object to redux arrey)
-    dispatch(employeesActions.addEmployee(state));
-
-    //Go back to employees page
+    dispatch(employeesActions.editEmployee(state));
     nav("/employees");
   };
 
@@ -53,6 +53,7 @@ const CreateEmployee = () => {
       <div className="input-empl">
         <label htmlFor="full-name">Full name</label>
         <input
+          value={state.fullName}
           onChange={handleTypo}
           name="fullName"
           className="full-name"
@@ -65,6 +66,7 @@ const CreateEmployee = () => {
       <div className="input-empl">
         <label htmlFor="i-email">Email</label>
         <input
+          value={state.email}
           onChange={handleTypo}
           name="email"
           className="i-email"
@@ -76,6 +78,7 @@ const CreateEmployee = () => {
       <div className="input-empl">
         <label htmlFor="phone">Phone number</label>
         <input
+          value={state.phoneNumber}
           onChange={handleTypo}
           name="phoneNumber"
           className="phone"
@@ -87,6 +90,7 @@ const CreateEmployee = () => {
       <div className="input-empl">
         <label htmlFor="birth">Date of birth</label>
         <input
+          value={state.birthDay}
           onChange={handleTypo}
           name="birthDay"
           className="birth"
@@ -98,6 +102,7 @@ const CreateEmployee = () => {
       <div className="input-empl">
         <label htmlFor="salary">Monthly salary</label>
         <input
+          value={state.salary}
           onChange={handleTypo}
           name="salary"
           className="salary"
@@ -107,14 +112,14 @@ const CreateEmployee = () => {
         />
       </div>
 
-      {isActive && (
-        <button onClick={handleSubmit} type="submit " className="submit">
+      {!isActive && (
+        <button type="submit " className="submit">
           Submit
         </button>
       )}
 
-      {!isActive && (
-        <button type="edit" className="btn-edit">
+      {isActive && (
+        <button onClick={handleEdit} type="edit" className="btn-edit">
           Edit
         </button>
       )}
@@ -122,4 +127,4 @@ const CreateEmployee = () => {
   );
 };
 
-export default CreateEmployee;
+export default EditEmployee;

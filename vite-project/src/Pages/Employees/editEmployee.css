@@ -1,9 +1,9 @@
 .form-create {
-  /* padding-top: 10vh; */
+  padding-top: 10vh;
   text-align: center;
   font-size: 1.6rem;
   color: var(--Dark-Grey);
-  /* height: 30vh; */
+  height: 100vh;
   overflow-y: auto;
 }
 

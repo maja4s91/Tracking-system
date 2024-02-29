@@ -1,15 +1,14 @@
 import "./employees.css";
 import { useDispatch, useSelector } from "react-redux";
 import { actions as employeesActions } from "../../global/slices/employeesSlice";
+import { useNavigate } from "react-router-dom";
 
 const EmployeesList = () => {
   const { employeesArr } = useSelector((state) => state.employees);
 
-  const dispatch = useDispatch();
-
-  // const handleDelete = () => {};
-
   if (!employeesArr) return;
+  const nav = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <ul className="lists-added-employee flex-column">
@@ -24,8 +23,18 @@ const EmployeesList = () => {
 
           <button
             onClick={() => {
-              dispatch(employeesActions.deleteEmployee(e.employee.id));
+              dispatch(employeesActions.getEmployeeId(e.employee.id));
+              nav("/employees/edit");
             }}
+            className="btn-delete"
+          >
+            Edit
+          </button>
+
+          <button
+            onClick={() =>
+              dispatch(employeesActions.deleteEmployee(e.employee.id))
+            }
             className="btn-delete"
           >
             Delete

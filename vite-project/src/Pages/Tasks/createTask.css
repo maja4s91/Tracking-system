@@ -1,13 +1,13 @@
-.form-create {
+.form-create-task {
   /* padding-top: 10vh; */
   text-align: center;
   font-size: 1.6rem;
   color: var(--Dark-Grey);
-  /* height: 30vh; */
+  height: 90vh;
   overflow-y: auto;
 }
 
-.input-empl {
+.input-tas {
   display: grid;
   grid-template-columns: 0.2fr 0.3fr;
   justify-content: center;
@@ -15,7 +15,7 @@
   padding: 1rem;
 }
 
-.btn-close {
+.btn-close-task {
   border: none;
   background-color: var(--Dark-Green);
   color: var(--Medium-Grey);
@@ -28,8 +28,8 @@
   transition: all 0.3s;
 }
 
-.submit,
-.btn-edit {
+.submit-task,
+.btn-edit-task {
   background-color: var(--Dark-Green);
   border: none;
   border-radius: 2px;
@@ -43,16 +43,16 @@
   transition: all 0.3s;
 }
 
-.submit:hover,
-.btn-edit:hover,
-.btn-close:hover {
+.submit-task:hover,
+.btn-edit-task:hover,
+.btn-close-task:hover {
   color: #fff;
   /* background-color: var(--Medium-Green); */
   transform: translateY(-1px);
 }
 
-.form-create input,
-.form-create select {
+.form-create-task input,
+.form-create-task select {
   padding: 1.2rem;
   font-size: 1.6rem;
   font-family: inherit;
