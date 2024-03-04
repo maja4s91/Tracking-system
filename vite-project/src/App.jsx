@@ -9,6 +9,7 @@ import CreateEmployee from "./Pages/Employees/CreateEmployee";
 import EditEmployee from "./Pages/Employees/EditEmployee";
 import { actions as employeesActions } from "./global/slices/employeesSlice";
 import CreateTask from "./Pages/Tasks/CreateTask";
+import CreateEpic from "./Pages/Epic/CreateEpic";
 // import { useSelector, useDispatch } from "react-redux";
 // import { useEffect } from "react";
 // import EmployeesList from "./Pages/Employees/EmployeesList";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/tasks/create" element={<CreateTask />} />
         <Route path="/epic" element={<Epic />} />
+        <Route path="/epic/create" element={<CreateEpic />} />
         <Route path="/reports" element={<Reports />} />
       </Routes>
     </>
