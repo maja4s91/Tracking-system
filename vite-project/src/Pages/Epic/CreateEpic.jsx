@@ -8,6 +8,7 @@ const CreateEpic = () => {
   const isActive = true;
   const nav = useNavigate();
   const { epicArr } = useSelector((state) => state.epic);
+  const { tasksArr } = useSelector((state) => state.tasks);
   const dispatch = useDispatch();
 
   let id = 0;
@@ -20,7 +21,7 @@ const CreateEpic = () => {
     title: "",
     status: "",
     description: "",
-    // tasksList: "",
+    tasksList: "",
   });
 
   const handleTypo = (e) => {

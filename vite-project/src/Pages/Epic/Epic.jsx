@@ -17,6 +17,7 @@ const Epic = () => {
           <p className="epic-title">Title</p>
 
           <p className="epic-status">Status</p>
+          <p className="epic-status">Tasks list</p>
           {/* <p className="task-due">Due date</p>  */}
         </li>
       </ul>

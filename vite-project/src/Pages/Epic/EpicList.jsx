@@ -4,6 +4,7 @@ import { actions as epicActions } from "../../global/slices/epicSlice";
 
 const EpicList = () => {
   const { epicArr } = useSelector((state) => state.epic);
+  const { tasksArr } = useSelector((state) => state.tasks);
   const dispatch = useDispatch();
 
   return (
@@ -14,6 +15,7 @@ const EpicList = () => {
           <p className="li-title-epic">{e.title}</p>
 
           <p className="li-status-epic">{e.status}</p>
+
           <button className="btn-delete-epic">Edit</button>
           <button
             onClick={() => dispatch(epicActions.deleteEpic(e.id))}

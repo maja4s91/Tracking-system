@@ -7,6 +7,7 @@ import { actions as tasksActions } from "../../global/slices/tasksSlice";
 const CreateTask = () => {
   const { employeesArr } = useSelector((state) => state.employees);
   const { tasksArr } = useSelector((state) => state.tasks);
+  const { epicArr } = useSelector((state) => state.epic);
 
   const dispatch = useDispatch();
   const nav = useNavigate();
@@ -110,10 +111,22 @@ const CreateTask = () => {
         </select>
       </div>
 
-      {/* <div className="input-tas">
+      <div className="input-tas">
         <label htmlFor="task-epic">Epic</label>
-        <select id="select-epic" class="task-epic" required></select>
-      </div> */}
+        <select
+          onChange={handleTypo}
+          id="select-epic"
+          className="task-epic"
+          name="epic"
+          required
+        >
+          <option value="">Unassigned</option>
+
+          {epicArr.map((e) => (
+            <option value={e.title}>{e.title}</option>
+          ))}
+        </select>
+      </div>
 
       <div className="input-tas">
         <label htmlFor="due">Due date</label>
