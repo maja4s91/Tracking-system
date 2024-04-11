@@ -8,7 +8,7 @@ const TaskList = () => {
   return (
     <ul className="lists-added-tasks flex-column">
       {tasksArr.map((t, i) => (
-        <li key={i++} className="task-info flex">
+        <li key={i++} className="task-info">
           <p className="li-id-task fs-4">{t.id}</p>
           <p className="li-title fs-4">{t.title}</p>
           <p className="li-assignee fs-4">{t.assignee}</p>

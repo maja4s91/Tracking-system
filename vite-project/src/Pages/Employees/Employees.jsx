@@ -12,7 +12,7 @@ const Employees = () => {
         </Link>
       </div>
     
-      <ul className="lists-employee flex-column">
+      <ul className="lists-employee">
         <li className="header-employee">
           <p className="empl-id fs-4">ID</p>
           <p className="fullname fs-4">Full name</p>
