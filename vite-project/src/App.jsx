@@ -5,11 +5,13 @@ import Tasks from "./Pages/Tasks/Tasks";
 import Epic from "./Pages/Epic/Epic";
 import Reports from "./Pages/Reports/Reports";
 import Home from "./Pages/Home/Home";
-import CreateEmployee from "./Pages/Employees/CreateEmployee";
+import Create from "./Pages/Employees/Create";
+// import CreateEmployee from "./Pages/Employees/CreateEmployee";
 import EditEmployee from "./Pages/Employees/EditEmployee";
 import { actions as employeesActions } from "./global/slices/employeesSlice";
 import CreateTask from "./Pages/Tasks/CreateTask";
 import CreateEpic from "./Pages/Epic/CreateEpic";
+
 // import { useSelector, useDispatch } from "react-redux";
 // import { useEffect } from "react";
 // import EmployeesList from "./Pages/Employees/EmployeesList";
@@ -24,7 +26,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/employees" element={<Employees />} />
-        <Route path="/employees/form" element={<CreateEmployee />} />
+        {/* <Route path="/employees/form" element={<CreateEmployee />} /> */}
+        <Route path="/employees/form" element={<Create />} />
         <Route path="/employees/edit" element={<EditEmployee />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/tasks/create" element={<CreateTask />} />
