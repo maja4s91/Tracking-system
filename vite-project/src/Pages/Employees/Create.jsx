@@ -60,7 +60,7 @@ const Create=()=>{
                 </div>
 
                 <div className="col-md-5">
-                  <label htmlFor="phoneNumberId" className="form-label fs-2">phoneNumber</label>
+                  <label htmlFor="phoneNumberId" className="form-label fs-2">Phone number</label>
                   <input onChange={handleTypo}  name="phoneNumber" type="text" id="phoneNumberId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="+381647961696"/>
                 </div>
 
