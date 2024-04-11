@@ -17,9 +17,11 @@
 .task-info {
   border-top: 1px solid var(--Dark-Green);
   border-bottom: 1px solid var(--Dark-Green);
-  padding: 0.5rem;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  /* padding: 0.5rem; */
+  padding: 2rem;
+  padding-bottom: 1rem;
+  display: grid!important;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr !important;
   align-items: center;
 }
 

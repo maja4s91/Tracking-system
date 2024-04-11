@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <div className="vh-100  d-flex justify-content-center align-items-center">
-      Welcome to the most efficiant tracking system application!
+    <div className="d-flex justify-content-center align-items-center vh-80 fs-1 px-3 ">
+      Welcome! Please feel free to explore!
     </div>
   );
 };

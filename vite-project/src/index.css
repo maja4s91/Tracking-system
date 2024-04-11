@@ -56,3 +56,9 @@ body {
   transition: all 0.5s;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
 }
+.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
+}
+.vh-80{
+  height: 80vh!important;
+}

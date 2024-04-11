@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light"
+      className="navbar navbar-expand-xxl navbar-light sticky-top py-3 py-lg-5 fs-1  "
       style={{ backgroundColor: "#86cb92" }}
     >
       <div className="container-fluid">
-        <Link to={"/"} className="navbar-brand active" aria-current="page">
+        <Link to={"/"} className="navbar-brand active fs-1" aria-current="page">
           Tracking system
         </Link>
         <button
@@ -22,24 +22,24 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-5" >
             <li className="nav-item">
-              <Link to={"/employees"} className="nav-link">
+              <Link to={"/employees"} className="nav-link px-3">
                 Employees
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/tasks"} className="nav-link">
+              <Link to={"/tasks"} className="nav-link px-3">
                 Tasks
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/epic"} className="nav-link">
+              <Link to={"/epic"} className="nav-link px-3">
                 Epic
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/reports"} className="nav-link">
+              <Link to={"/reports"} className="nav-link px-3">
                 Reports
               </Link>
             </li>

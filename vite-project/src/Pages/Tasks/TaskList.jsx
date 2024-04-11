@@ -9,19 +9,19 @@ const TaskList = () => {
     <ul className="lists-added-tasks flex-column">
       {tasksArr.map((t, i) => (
         <li key={i++} className="task-info flex">
-          <p className="li-id-task">{t.id}</p>
-          <p className="li-title">{t.title}</p>
-          <p className="li-assignee">{t.assignee}</p>
-          <p className="li-status">{t.taskStatus}</p>
+          <p className="li-id-task fs-4">{t.id}</p>
+          <p className="li-title fs-4">{t.title}</p>
+          <p className="li-assignee fs-4">{t.assignee}</p>
+          <p className="li-status fs-4">{t.taskStatus}</p>
 
-          <p className="li-due">{t.dueDate}</p>
+          <p className="li-due fs-4">{t.dueDate}</p>
 
-          <button className="btn-delete-task">Edit</button>
+          {/* <button className="btn-delete-task fs-4">Edit</button> */}
           <button
             onClick={() => {
               dispatch(tasksActions.deleteTask(t.id));
             }}
-            className="btn-delete-task"
+            className="btn-delete-task fs-4"
           >
             Delete
           </button>

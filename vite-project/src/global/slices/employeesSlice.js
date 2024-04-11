@@ -18,16 +18,16 @@ export const { actions, reducer } = createSlice({
     getEmployeeId(state, { payload: employeeId }) {
       state.editEmployeeId = employeeId;
     },
-    editEmployee(state, { payload: employee }) {
-      if (!employee) return;
+    // editEmployee(state, { payload: employee }) {
+    //   if (!employee) return;
 
-      state.employeesArr.map(
-        (e) =>
-          (state.employeesArr =
-            e.employee.id === employee.id
-              ? { ...e.employee, ...employee }
-              : { ...e.employee })
-      );
+    //   state.employeesArr.map(
+    //     (e) =>
+    //       (state.employeesArr =
+    //         e.employee.id === employee.id
+    //           ? { ...e.employee, ...employee }
+    //           : { ...e.employee })
+    //   );
 
       // return edit;
       // console.log(edit);
@@ -51,6 +51,6 @@ export const { actions, reducer } = createSlice({
       // };
 
       // console.log(add);
-    },
+    // },
   },
 });
