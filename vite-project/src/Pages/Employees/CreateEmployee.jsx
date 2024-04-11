@@ -46,10 +46,12 @@ const CreateEmployee = () => {
   };
 
   return (
-    <form className="form-create">
-      <button className="btn-close" onClick={handleClose}>
-        <ion-icon className="icon-close" name="close-outline"></ion-icon>
-      </button>
+
+
+   
+    <form className="form-create vh-80">
+    <button type="button" className="btn-close" aria-label="Close" onClick={handleClose}></button>
+
       <div className="input-empl">
         <label htmlFor="full-name">Full name</label>
         <input
@@ -119,6 +121,7 @@ const CreateEmployee = () => {
         </button>
       )}
     </form>
+    
   );
 };
 

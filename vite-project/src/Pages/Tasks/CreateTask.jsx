@@ -40,14 +40,9 @@ const CreateTask = () => {
 
   return (
     <form className="form-create-task">
-      <button
-        onClick={() => {
+      <button type="button" className="btn-close" aria-label="Close" onClick={() => {
           nav("/tasks");
-        }}
-        className="btn-close-task"
-      >
-        <ion-icon className="icon-close-task" name="close-outline"></ion-icon>
-      </button>
+        }}></button>
 
       <div className="input-tas">
         <label htmlFor="title">Title</label>

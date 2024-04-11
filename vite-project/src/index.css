@@ -24,7 +24,6 @@ html {
 
 body {
   /* background-color: var(--Dark-Blue); */
-  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -52,7 +51,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
-  z-index: 100;
+  z-index: 100 !important;
   transition: all 0.5s;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
 }

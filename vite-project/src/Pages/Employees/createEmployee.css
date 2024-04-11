@@ -1,32 +1,13 @@
-.form-create {
-  /* padding-top: 10vh; */
-  text-align: center;
-  font-size: 1.6rem;
-  color: var(--Dark-Grey);
-  /* height: 30vh; */
-  overflow-y: auto;
-}
 
 .input-empl {
   display: grid;
-  grid-template-columns: 0.2fr 0.3fr;
+  grid-template-columns: 0.1fr 0.2fr;
   justify-content: center;
   align-items: center;
   padding: 1rem;
 }
 
-.btn-close {
-  border: none;
-  background-color: var(--Dark-Green);
-  color: var(--Medium-Grey);
 
-  font-size: 3rem;
-  padding: 0.5rem 1rem;
-  padding-bottom: 0;
-  margin-bottom: 4rem;
-  margin-left: 80rem;
-  transition: all 0.3s;
-}
 
 .submit,
 .btn-edit {

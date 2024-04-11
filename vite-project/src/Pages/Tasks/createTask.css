@@ -1,15 +1,15 @@
 .form-create-task {
   /* padding-top: 10vh; */
-  text-align: center;
+  /* text-align: center;
   font-size: 1.6rem;
   color: var(--Dark-Grey);
   height: 90vh;
-  overflow-y: auto;
+  overflow-y: auto; */
 }
 
 .input-tas {
   display: grid;
-  grid-template-columns: 0.2fr 0.3fr;
+  grid-template-columns: 0.1fr 0.2fr;
   justify-content: center;
   align-items: center;
   padding: 1rem;

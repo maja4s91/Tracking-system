@@ -36,15 +36,11 @@ const CreateEpic = () => {
   };
 
   return (
-    <form className="form-create-epic">
-      <button
-        onClick={() => {
+    <form className="form-create-epic vh-80">
+
+      <button type="button" className="btn-close" aria-label="Close" onClick={() => {
           nav("/epic");
-        }}
-        className="btn-close-epic"
-      >
-        <ion-icon className="icon-close-epic" name="close-outline"></ion-icon>
-      </button>
+        }}></button>
       <div className="input-epi">
         <label htmlFor="title">Title</label>
         <input
