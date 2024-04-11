@@ -59,17 +59,17 @@ const Create=()=>{
                   <input onChange={handleTypo}  name="email" type="email" id="emailId" className="form-control fs-2 mb-md-5 mb-sm-2 input-border-color" placeholder="jovan4@gmail.com"/>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-5">
                   <label htmlFor="phoneNumberId" className="form-label fs-2">phoneNumber</label>
                   <input onChange={handleTypo}  name="phoneNumber" type="text" id="phoneNumberId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="+381647961696"/>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-4">
                   <label htmlFor="birthDayId" className="form-label fs-2">Date of birth</label>
                   <input onChange={handleTypo}  name="birthDay" type="date" id="birthDayId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="23/1/1996"/>
                 </div>
 
-                <div className="col-md-12">
+                <div className="col-md-3">
                   <label htmlFor="salaryId" className="form-label fs-2">Salary</label>
                   <input onChange={handleTypo}  name="salary" type="text" id="salaryId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="800e"/>
                 </div>
