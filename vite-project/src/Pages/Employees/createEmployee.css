@@ -1,7 +1,7 @@
-
+/* 
 .input-empl {
   display: grid;
-  grid-template-columns: 0.1fr 0.2fr;
+  grid-template-columns: 0.12fr 0.2fr !important;
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -28,7 +28,7 @@
 .btn-edit:hover,
 .btn-close:hover {
   color: #fff;
-  /* background-color: var(--Medium-Green); */
+  /* background-color: var(--Medium-Green); 
   transform: translateY(-1px);
 }
 
@@ -40,9 +40,11 @@
   color: var(--Dark-Gray);
   font-weight: 500;
   border: 0.2rem solid var(--Dark-Green);
-  /* background-color: #fdf2e9; */
+  /* background-color: #fdf2e9; 
   background-color: #fff;
 
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
+} */
+
+.input-border-color{  color: var(--Dark-Gray) !important;}               

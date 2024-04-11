@@ -56,7 +56,7 @@ const Create=()=>{
           
                 <div className="col-md-6">
                   <label htmlFor="emailId" className="form-label fs-2">Email</label>
-                  <input onChange={handleTypo}  name="email" type="email" id="emailId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="jovan4@gmail.com"/>
+                  <input onChange={handleTypo}  name="email" type="email" id="emailId" className="form-control fs-2 mb-md-5 mb-sm-2 input-border-color" placeholder="jovan4@gmail.com"/>
                 </div>
 
                 <div className="col-md-6">
@@ -74,7 +74,7 @@ const Create=()=>{
                   <input onChange={handleTypo}  name="salary" type="text" id="salaryId" className="form-control fs-2 mb-md-5 mb-sm-2" placeholder="800e"/>
                 </div>
 
-                {isActive && (<div className="col-12 mx-auto"><button onClick={handleSubmit} type="submit " className="btn btn-primary fs-2 " >Submit</button></div>)}
+                {isActive && (<div className="col-12 mx-auto"><button onClick={handleSubmit} type="submit " className="btn btn-success fs-2 " >Submit</button></div>)}
  
              </form>
         </div>
