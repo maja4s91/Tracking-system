@@ -8,6 +8,17 @@ const CreateTask = () => {
   const { employeesArr } = useSelector((state) => state.employees);
   const { tasksArr } = useSelector((state) => state.tasks);
   const { epicArr } = useSelector((state) => state.epic);
+  const taskFormDataSelect = [
+    {
+      divColTask: "col-md-12",
+      labelIdTask: "titleId",
+      labelNameTask: "Title",
+      nameTask: "title",
+      typeTask: "text",
+      idTask: "titleId",
+      placeholderTask: "Fix gaps",
+    },
+  ];
 
   const dispatch = useDispatch();
   const nav = useNavigate();
@@ -40,9 +51,14 @@ const CreateTask = () => {
 
   return (
     <form className="form-create-task">
-      <button type="button" className="btn-close" aria-label="Close" onClick={() => {
+      <button
+        type="button"
+        className="btn-close"
+        aria-label="Close"
+        onClick={() => {
           nav("/tasks");
-        }}></button>
+        }}
+      ></button>
 
       <div className="input-tas">
         <label htmlFor="title">Title</label>
@@ -55,6 +71,7 @@ const CreateTask = () => {
           name="title"
         />
       </div>
+
       <div className="input-tas">
         <label htmlFor="description">Description</label>
         <textarea

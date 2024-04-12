@@ -57,7 +57,6 @@ const Create = () => {
       placeholderEm: "1000e",
     },
   ];
-  employeesFormData.map((d) => console.log(d));
   //1. Handle the form close button
   const handleClose = () => nav("/employees");
 
@@ -117,75 +116,6 @@ const Create = () => {
             />
           </div>
         ))}
-        {/* <div className="col-md-12">
-          <label htmlFor="full-name" className="form-label fs-2">
-            Full name
-          </label>
-          <input
-            onChange={handleTypo}
-            name="fullName"
-            type="text"
-            id="full-name"
-            className="form-control fs-2 mb-md-5 mb-sm-2"
-            placeholder="Jovan Jovanovic"
-          />
-        </div>
-
-        <div className="col-md-5">
-          <label htmlFor="emailId" className="form-label fs-2">
-            Email
-          </label>
-          <input
-            onChange={handleTypo}
-            name="email"
-            type="email"
-            id="emailId"
-            className="form-control fs-2 mb-md-5 mb-sm-2 input-border-color"
-            placeholder="jovan4@gmail.com"
-          />
-        </div>
-
-        <div className="col-md-4">
-          <label htmlFor="phoneNumberId" className="form-label fs-2">
-            Phone number
-          </label>
-          <input
-            onChange={handleTypo}
-            name="phoneNumber"
-            type="text"
-            id="phoneNumberId"
-            className="form-control fs-2 mb-md-5 mb-sm-2"
-            placeholder="+381647961696"
-          />
-        </div>
-
-        <div className="col-md-3">
-          <label htmlFor="birthDayId" className="form-label fs-2">
-            Date of birth
-          </label>
-          <input
-            onChange={handleTypo}
-            name="birthDay"
-            type="date"
-            id="birthDayId"
-            className="form-control fs-2 mb-md-5 mb-sm-2"
-            placeholder="23/1/1996"
-          />
-        </div>
-
-        <div className="col-md-2">
-          <label htmlFor="salaryId" className="form-label fs-2">
-            Salary
-          </label>
-          <input
-            onChange={handleTypo}
-            name="salary"
-            type="text"
-            id="salaryId"
-            className="form-control fs-2 mb-md-5 mb-sm-2"
-            placeholder="800e"
-          />
-        </div> */}
 
         {isActive && (
           <div className="d-flex justify-content-center">
