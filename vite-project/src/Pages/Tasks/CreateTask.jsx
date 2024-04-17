@@ -76,13 +76,13 @@ const CreateTask = () => {
         </div>
 
         <div className="col-md-6">
-          <label htmlFor="textareaId" className="form-label">
+          <label htmlFor="textareaId" className="form-label fs-2">
             Description
           </label>
           <textarea
             onChange={handleTypo}
             name="description"
-            className="form-control"
+            className="form-control form-control-lg"
             id="textareaId"
             rows="5"
             placeholder=""
@@ -96,7 +96,7 @@ const CreateTask = () => {
           <select
             onChange={handleTypo}
             name="assignee"
-            className="form-select"
+            className="form-select form-select-lg fs-2"
             aria-label="Default select example"
             id="assigneeId"
             required
@@ -115,7 +115,7 @@ const CreateTask = () => {
           <select
             onChange={handleTypo}
             name="taskStatus"
-            className="form-select"
+            className="form-select form-select-lg fs-2"
             aria-label="Default select example"
             id="select-statusId"
             required
@@ -134,7 +134,7 @@ const CreateTask = () => {
           <select
             onChange={handleTypo}
             name="epic"
-            className="form-select"
+            className="form-select form-select-lg fs-2"
             aria-label="Default select example"
             id="epicId"
             required
