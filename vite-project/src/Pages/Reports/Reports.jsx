@@ -49,7 +49,9 @@ const Reports = () => {
               </p>
               <div className="five-employee-box-title">
                 <p className="report-employee-names fs-4">Full name</p>
-                <p className="report-employee-tasks fs-4">Total completed tasks</p>
+                <p className="report-employee-tasks fs-4">
+                  Total completed tasks
+                </p>
               </div>
               <div className="five-employee-box">
                 {/* <p class="report-employee-names fs-4">{empl.name}</p>
@@ -57,32 +59,6 @@ const Reports = () => {
               </div>
             </li>
           </ul>
-        </div>
-        {/* Tasks */}
-
-        <div className="report-task">
-          <h3 className="report-task-heading fs-2">Tasks report</h3>
-          <p className="report-task-title fs-4">
-            Total completed:
-            <span className="report-task-sum report__task-completed fs-4">
-              {completed}
-            </span>
-          </p>
-          <p className="report-task-title fs-4">
-            Total in progress:
-            <span className="report-task-sum report__task-inprogress fs-4">
-              {InProgress}
-            </span>
-          </p>
-          <p className="report-task-title fs-4">
-            Total to do:
-            <span className="report-task-sum report__task-todo fs-4">{toDo}</span>
-          </p>
-
-          <p className="report-task-title fs-4">
-            Total tasks:
-            <span className="report-task-sum report__task-total fs-4">{total}</span>
-          </p>
         </div>
 
         <div className="report-epic">
@@ -109,6 +85,37 @@ const Reports = () => {
             Total epic completed:
             <span className="report-epic-sum report__epic-total fs-4">
               {totalEpic}
+            </span>
+          </p>
+        </div>
+
+        {/* Tasks */}
+
+        <div className="report-task">
+          <h3 className="report-task-heading fs-2">Tasks report</h3>
+          <p className="report-task-title fs-4">
+            Total completed:
+            <span className="report-task-sum report__task-completed fs-4">
+              {completed}
+            </span>
+          </p>
+          <p className="report-task-title fs-4">
+            Total in progress:
+            <span className="report-task-sum report__task-inprogress fs-4">
+              {InProgress}
+            </span>
+          </p>
+          <p className="report-task-title fs-4">
+            Total to do:
+            <span className="report-task-sum report__task-todo fs-4">
+              {toDo}
+            </span>
+          </p>
+
+          <p className="report-task-title fs-4">
+            Total tasks:
+            <span className="report-task-sum report__task-total fs-4">
+              {total}
             </span>
           </p>
         </div>

@@ -63,11 +63,11 @@ const CreateEpic = () => {
 
         <div className="col-md-6">
           <label htmlFor="select-statusId" className="form-label fs-2">
-            Task status{" "}
+            Task status
           </label>
           <select
             onChange={handleTypo}
-            name="taskStatus"
+            name="status"
             className="form-select form-select-lg fs-2"
             aria-label="Default select example"
             id="select-statusId"
