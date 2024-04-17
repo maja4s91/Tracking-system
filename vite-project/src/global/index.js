@@ -3,7 +3,16 @@ import { reducer as employeesReducer } from "./slices/employeesSlice";
 import { reducer as tasksReducer } from "./slices/tasksSlice";
 import { reducer as epicReducer } from "./slices/epicSlice";
 import storage from "redux-persist/lib/storage";
-import { persistReducer } from "redux-persist";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
 import { combineReducers } from "@reduxjs/toolkit";
 
 const persistConfig = {
@@ -20,4 +29,10 @@ const persistedReducer = persistReducer(persistConfig, reducer);
 
 export default configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });

@@ -101,9 +101,11 @@ const CreateTask = () => {
             id="assigneeId"
             required
           >
-            <option selected>Choose asignee</option>
-            {employeesArr.map((e) => (
-              <option value={e.employee.fullName}>{e.employee.fullName}</option>
+            <option>Choose asignee</option>
+            {employeesArr.map((e, i) => (
+              <option key={i} value={e.employee.fullName}>
+                {e.employee.fullName}
+              </option>
             ))}
           </select>
         </div>
@@ -120,7 +122,7 @@ const CreateTask = () => {
             id="select-statusId"
             required
           >
-            <option selected>Choose status</option>
+            <option>Choose status</option>
             <option value="To do">To do</option>
             <option value="In progress">In progress</option>
             <option value="Completed">Completed</option>
@@ -139,9 +141,11 @@ const CreateTask = () => {
             id="epicId"
             required
           >
-            <option selected>Unassigned</option>
-            {epicArr.map((e) => (
-              <option value={e.title}>{e.title}</option>
+            <option>Unassigned</option>
+            {epicArr.map((e, i) => (
+              <option key={i} value={e.title}>
+                {e.title}
+              </option>
             ))}
           </select>
         </div>
