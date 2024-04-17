@@ -99,7 +99,7 @@ const CreateEpic = () => {
             <button
               onClick={handleSubmit}
               type="submit "
-              className="btn btn-success fs-2 "
+              className="btn btn-success fs-2 mb-5 "
             >
               Submit
             </button>
